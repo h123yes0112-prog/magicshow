@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>「文潔姐姐魔法劇場」親子藝文巡演提案書 - 張文潔議員</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #FF7B90;
+      --secondary: #5FA8D3;
+      --accent: #FFD166;
+      --success: #48B178;
+      --dark: #1E2D4A;
+      --light: #F8F9FA;
+      --white: #FFFFFF;
+      --bg-pink: #FFF4F6;
+      --bg-blue: #EFF7FA;
+      --bg-yellow: #FFFBF0;
+      --bg-green: #F0FAF3;
+      --font-primary: 'Noto Sans TC', sans-serif;
+      --font-accent: 'Quicksand', 'Noto Sans TC', sans-serif;
+      --shadow-sm: 0 4px 10px rgba(30,45,74,0.05);
+      --shadow-md: 0 8px 24px rgba(30,45,74,0.08);
+      --shadow-lg: 0 15px 40px rgba(30,45,74,0.12);
+      --radius-sm: 12px;
+      --radius-md: 20px;
+      --radius-lg: 32px;
+      --transition: all 0.4s cubic-bezier(0.16,1,0.3,1);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-primary);
+      color: var(--dark);
+      background-color: #FAF6F0;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── 導覽列 ────────────────────── */
+    header {
+      background-color: rgba(255,255,255,0.85);
+      backdrop-filter: blur(10px);
+      border-bottom: 2px solid rgba(30,45,74,0.05);
+      padding: 15px 30px;
+      position: sticky; top: 0; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .logo-container { display: flex; align-items: center; gap: 10px; }
+    .logo-badge {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: var(--white); padding: 4px 12px; border-radius: 30px;
+      font-size: 0.8rem; font-weight: 700; letter-spacing: 1px;
+    }
+    .logo-text { font-weight: 900; color: var(--dark); font-size: 1.25rem; }
+    .nav-links { display: flex; gap: 20px; }
+    .nav-btn {
+      background: none; border: none;
+      font-family: var(--font-primary); font-size: 0.95rem; font-weight: 700;
+      color: var(--dark); opacity: 0.7; cursor: pointer;
+      padding: 6px 12px; border-radius: 10px; transition: var(--transition);
+    }
+    .nav-btn:hover, .nav-btn.active {
+      opacity: 1; background-color: var(--bg-pink); color: var(--primary);
+    }
+
+    /* ── 主容器 ────────────────────── */
+    .proposal-container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+
+    .page-section { display: none; animation: fadeIn 0.6s ease; }
+    .page-section.active { display: block; }
+
+    @keyframes fadeIn {
+      from { opacity:0; transform: translateY(15px); }
+      to   { opacity:1; transform: translateY(0); }
+    }
+
+    /* ══════════════════════════════════════════
+       封面版型
+    ══════════════════════════════════════════ */
+    .cover-card {
+      background-color: var(--white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      min-height: 680px;
+      position: relative;
+      border: 3px solid var(--dark);
+    }
+    
+    .troupe-cols-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* 左半 */
+    .cover-left {
+      padding: 60px 50px;
+      display: flex; flex-direction: column; justify-content: space-between;
+      position: relative; z-index: 2;
+      background-color: var(--bg-yellow);
+      border-right: 3px solid var(--dark);
+    }
+    .cover-left::before {
+      content: "";
+      position: absolute; top:0; left:0; width:100%; height:60%;
+      background: linear-gradient(135deg,rgba(255,123,144,.15) 0%,rgba(95,168,211,.15) 100%);
+      clip-path: polygon(0 0,100% 0,100% 65%,0% 100%);
+      z-index: -1;
+    }
+    .cover-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.95rem; font-weight: 700; color: var(--primary);
+      letter-spacing: 2px; margin-bottom: 20px;
+    }
+    .cover-badge svg { fill: var(--primary); }
+    .cover-title-group { margin: 30px 0; }
+    .cover-title-tag {
+      font-size: 1.25rem; color: var(--secondary); font-weight: 900;
+      margin-bottom: 10px; display: inline-block;
+      border-bottom: 3px solid var(--accent); padding-bottom: 3px;
+    }
+    .cover-title {
+      font-size: 3.4rem; font-weight: 900; line-height: 1.2;
+      color: var(--dark); margin-bottom: 15px; word-break: keep-all;
+    }
+    .cover-title span.highlight {
+      color: var(--primary); position: relative; display: inline-block;
+    }
+    .cover-title span.highlight::after {
+      content: ""; position: absolute; bottom: 5px; left: 0;
+      width: 100%; height: 12px;
+      background-color: rgba(255,209,102,0.5);
+      z-index: -1; border-radius: 5px;
+    }
+    .cover-subtitle { font-size: 1.1rem; font-weight: 500; color: #556080; line-height: 1.6; }
+    .cover-footer {
+      display: flex; flex-direction: column; gap: 15px;
+      border-top: 2px dashed rgba(30,45,74,.15); padding-top: 25px;
+    }
+    .cover-meta { display: flex; gap: 20px; font-size: 0.9rem; color: #667085; font-weight: 500; }
+    .meta-item { display: flex; align-items: center; gap: 6px; }
+    .start-btn {
+      background-color: var(--primary); color: var(--white);
+      border: 3px solid var(--dark); padding: 15px 30px;
+      font-size: 1.1rem; font-weight: 900; border-radius: var(--radius-sm);
+      cursor: pointer; box-shadow: 4px 4px 0px var(--dark);
+      transition: all .2s ease; align-self: flex-start;
+      display: flex; align-items: center; gap: 10px;
+      font-family: var(--font-primary);
+    }
+    .start-btn:hover  { transform: translate(-2px,-2px); box-shadow: 6px 6px 0px var(--dark); background-color: #ff607b; }
+    .start-btn:active { transform: translate(2px,2px);   box-shadow: 2px 2px 0px var(--dark); }
+
+    /* 右半 */
+    .cover-right {
+      position: relative;
+      background-color: var(--bg-blue);
+      display: flex; justify-content: center; align-items: center;
+      overflow: hidden; flex-direction: column; gap: 20px; padding: 40px 30px;
+    }
+    .bg-shape-1 {
+      position: absolute; bottom:-50px; right:-50px;
+      width:300px; height:300px; border-radius:50%;
+      background-color: var(--accent); z-index:2; opacity:.6;
+    }
+    .bg-shape-2 {
+      position: absolute; top:-80px; left:-80px;
+      width:250px; height:250px; border-radius:40px;
+      transform: rotate(25deg);
+      background-color: var(--primary); z-index:2; opacity:.2;
+    }
+
+    /* 雲朵 */
+    .cloud-deco {
+      position: absolute; background-color: var(--white);
+      border-radius: 100px; height:40px; width:120px;
+      z-index:3; opacity:.85; animation: floatCloud 20s infinite linear;
+    }
+    .cloud-deco::before {
+      content:""; position:absolute; background-color:var(--white);
+      border-radius:50%; height:60px; width:60px; top:-30px; left:15px;
+    }
+    .cloud-deco::after {
+      content:""; position:absolute; background-color:var(--white);
+      border-radius:50%; height:45px; width:45px; top:-20px; right:20px;
+    }
+    .cloud-1 { top:15%; left:10%; animation-duration:25s; }
+    .cloud-2 { top:25%; right:-50px; animation-duration:35s; animation-delay:-10s; }
+    @keyframes floatCloud {
+      0%   { transform: translateX(-150px); }
+      100% { transform: translateX(500px);  }
+    }
+
+    /* 摩天輪 */
+    .ferris-wheel {
+      position: absolute; bottom:20px; left:30px;
+      width:110px; height:110px; opacity:.45; z-index:3;
+      animation: spin 45s infinite linear;
+    }
+    @keyframes spin { 100% { transform: rotate(360deg); } }
+
+    /* 帳篷 */
+    .circus-tent {
+      position: absolute; bottom:0; right:40px;
+      width:100px; height:80px; opacity:.4; z-index:3;
+    }
+
+    /* ── 右側主內容：人物框 ── */
+    .cover-right-inner {
+      position: relative; z-index: 4;
+      display: flex; flex-direction: column; align-items: center; gap: 18px;
+    }
+
+    /* 人物照片框 */
+    .portrait-wrapper {
+      position: relative;
+      width: 350px; height: 420px;
+      filter: drop-shadow(6px 10px 0px var(--dark));
+    }
+    .portrait-frame {
+      width:100%; height:100%;
+      border-radius: 160px 160px 20px 20px;
+      background-color: #eaeef6;
+      background-image: url('01.jpg');
+      background-size: cover; background-position: center top;
+      position: relative; overflow: hidden;
+    }
+    .deco-banner {
+      position: absolute; bottom:-15px; left:50%;
+      transform: translateX(-50%);
+      background-color: var(--accent); color: var(--dark);
+      border: 3px solid var(--dark); padding: 6px 20px;
+      font-weight: 900; font-size: 0.9rem; white-space: nowrap;
+      border-radius: 8px; z-index: 4;
+      box-shadow: 3px 3px 0px rgba(0,0,0,.15);
+    }
+
+
+
+    /* ══════════════════════════════════════════
+       內頁共用
+    ══════════════════════════════════════════ */
+    .inner-page-layout {
+      background-color: var(--white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      border: 3px solid var(--dark);
+      min-height: 600px; padding: 50px; position: relative;
+    }
+    .inner-page-layout::before {
+      content:""; position:absolute; top:0; left:5%; right:5%; height:12px;
+      background: radial-gradient(circle, var(--dark) 4px, transparent 5px);
+      background-size: 24px 12px; opacity:.15;
+    }
+
+    .section-header {
+      margin-bottom: 40px; border-bottom: 3px solid var(--dark);
+      padding-bottom: 15px;
+      display: flex; justify-content: space-between; align-items: flex-end;
+    }
+    .section-title {
+      font-size: 2rem; font-weight: 900; color: var(--dark);
+      display: flex; align-items: center; gap: 12px;
+    }
+    .section-title::before {
+      content:""; width:16px; height:16px;
+      background-color: var(--primary); border: 3px solid var(--dark);
+      border-radius: 50%; display: inline-block;
+    }
+    .section-subtitle { font-size: 1rem; color: #667085; font-weight: 700; font-family: var(--font-accent); }
+
+    .content-grid { display: grid; grid-template-columns: 1fr; gap: 30px; }
+    .content-grid.two-cols { grid-template-columns: 1fr 1fr; }
+
+    /* 故事書卡片 */
+    .story-card {
+      background-color: var(--white);
+      border: 3px solid var(--dark); border-radius: var(--radius-md);
+      padding: 30px; box-shadow: 4px 4px 0px var(--dark);
+      position: relative; transition: var(--transition);
+    }
+    .story-card:hover { transform: translate(-2px,-2px); box-shadow: 6px 6px 0px var(--dark); }
+    .story-card.pink-theme   { background-color: var(--bg-pink); }
+    .story-card.blue-theme   { background-color: var(--bg-blue); }
+    .story-card.yellow-theme { background-color: var(--bg-yellow); }
+    .story-card.green-theme  { background-color: var(--bg-green); }
+
+    .card-title { font-size: 1.3rem; font-weight: 900; margin-bottom: 12px; color: var(--dark); }
+    .card-text  { font-size: 1rem; color: #3e4a68; text-align: justify; }
+
+    /* 清單 */
+    .story-list { list-style: none; display: flex; flex-direction: column; gap: 15px; }
+    .story-list li { position: relative; padding-left: 30px; font-size: 1rem; font-weight: 500; color: var(--dark); }
+    .story-list li::before {
+      content: "★"; position: absolute; left:0; top:2px;
+      color: var(--accent); text-shadow: 1px 1px 0px var(--dark); font-size: 1.1rem;
+    }
+
+    /* 時間軸 */
+    .timeline { display: flex; flex-direction: column; gap: 20px; margin-top: 10px; }
+    .timeline-item { display: grid; grid-template-columns: 140px 1fr; gap: 20px; position: relative; }
+    .timeline-item::before {
+      content:""; position:absolute; left:139px; top:0; bottom:-20px;
+      width:2px; border-left: 2px dashed rgba(30,45,74,.2);
+    }
+    .timeline-item:last-child::before { display: none; }
+    .time-badge {
+      background-color: var(--dark); color: var(--white);
+      font-family: var(--font-accent); font-weight: 700;
+      text-align: center; padding: 8px 12px; border-radius: 8px;
+      font-size: 0.9rem; align-self: flex-start;
+      border: 2px solid var(--dark); box-shadow: 2px 2px 0px rgba(0,0,0,.15);
+    }
+    .timeline-content {
+      background-color: var(--white); border: 2px solid var(--dark);
+      border-radius: 12px; padding: 20px; position: relative;
+    }
+    .timeline-title-group {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 8px; border-bottom: 1px dashed rgba(30,45,74,.15); padding-bottom: 8px;
+    }
+    .timeline-title { font-weight: 900; font-size: 1.1rem; color: var(--dark); }
+    .timeline-tag {
+      background-color: var(--bg-pink); color: var(--primary);
+      font-size: 0.8rem; font-weight: 700; padding: 2px 8px;
+      border-radius: 4px; border: 1px solid var(--primary);
+    }
+
+    /* 導航按鈕 */
+    .proposal-navigation { display: flex; justify-content: space-between; margin-top: 30px; }
+    .nav-arrow-btn {
+      background-color: var(--white); border: 2px solid var(--dark);
+      color: var(--dark); padding: 10px 20px; font-size: 0.95rem; font-weight: 700;
+      border-radius: var(--radius-sm); cursor: pointer;
+      box-shadow: 3px 3px 0 var(--dark); transition: var(--transition);
+      display: flex; align-items: center; gap: 8px;
+      font-family: var(--font-primary);
+    }
+    .nav-arrow-btn:hover  { transform: translate(-1px,-1px); box-shadow: 4px 4px 0 var(--dark); background-color: var(--light); }
+    .nav-arrow-btn:active { transform: translate(1px,1px);   box-shadow: 1px 1px 0 var(--dark); }
+
+    /* 演出卡司 */
+    .cast-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 20px; }
+    .cast-card {
+      background-color: var(--white); border: 3px solid var(--dark);
+      border-radius: var(--radius-md); overflow: hidden;
+      box-shadow: 4px 4px 0px var(--dark); transition: var(--transition);
+      display: flex; flex-direction: row; height: 180px;
+    }
+    .cast-card:hover { transform: translate(-2px,-2px); box-shadow: 6px 6px 0px var(--dark); }
+    .cast-img { width: 140px; height: 100%; background-size: cover; background-position: center; border-right: 3px solid var(--dark); border-bottom: none; flex-shrink: 0; }
+    .cast-body { padding: 15px; flex-grow: 1; display: flex; flex-direction: column; gap: 8px; justify-content: center; }
+    .cast-title { font-size: 1.12rem; font-weight: 900; color: var(--dark); }
+    .cast-text  { font-size: 0.82rem; color: #3e4a68; line-height: 1.5; text-align: justify; }
+
+    /* ── 劇團介紹特有樣式 ── */
+    .troupe-hero {
+      width: 100%; border-radius: var(--radius-md);
+      overflow: hidden; border: 3px solid var(--dark);
+      box-shadow: 5px 5px 0px var(--dark); margin-bottom: 30px;
+      position: relative;
+    }
+    .troupe-hero img {
+      width:100%; display:block; height: 380px; object-fit:cover; object-position: center 30%;
+    }
+    .troupe-hero-overlay {
+      position: absolute; bottom:0; left:0; right:0;
+      background: linear-gradient(transparent, rgba(30,45,74,0.85));
+      padding: 20px 30px;
+      display: flex; align-items: flex-end; justify-content: space-between;
+    }
+    .troupe-hero-title {
+      color: var(--white); font-size: 1.8rem; font-weight: 900;
+      text-shadow: 2px 2px 0 rgba(0,0,0,.4);
+    }
+    .troupe-hero-badge {
+      background-color: var(--accent); color: var(--dark);
+      border: 2px solid var(--dark); padding: 6px 16px;
+      border-radius: 30px; font-weight: 900; font-size: 0.9rem;
+      box-shadow: 2px 2px 0 var(--dark);
+    }
+    .stat-grid {
+      display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-bottom: 30px;
+    }
+    .stat-card {
+      background-color: var(--white); border: 3px solid var(--dark);
+      border-radius: var(--radius-md); padding: 24px 20px;
+      box-shadow: 4px 4px 0px var(--dark); text-align: center;
+      transition: var(--transition);
+    }
+    .stat-card:hover { transform: translate(-2px,-2px); box-shadow: 6px 6px 0px var(--dark); }
+    .stat-number { font-size: 2.8rem; font-weight: 900; color: var(--primary); font-family: var(--font-accent); line-height: 1; }
+    .stat-unit   { font-size: 1rem; font-weight: 700; color: var(--dark); margin-top: 4px; }
+    .stat-label  { font-size: 0.85rem; color: #667085; margin-top: 6px; }
+
+    .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .feature-item {
+      background-color: var(--white); border: 2.5px solid var(--dark);
+      border-radius: var(--radius-sm); padding: 22px;
+      box-shadow: 3px 3px 0 var(--dark); display: flex; gap: 16px; align-items: flex-start;
+    }
+    .feature-icon {
+      font-size: 1.8rem; width: 48px; height: 48px;
+      background-color: var(--bg-yellow);
+      border: 2px solid var(--dark); border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .feature-text h4 { font-size: 1rem; font-weight: 900; color: var(--dark); margin-bottom: 6px; }
+    .feature-text p  { font-size: 0.88rem; color: #3e4a68; line-height: 1.55; }
+
+    /* ══════════════════════════════════════════
+       列印 / PDF A4
+    ══════════════════════════════════════════ */
+    @media print {
+      @page { size: A4 landscape; margin: 0; }
+      * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+      header, .proposal-navigation, .print-btn-wrap, .start-btn { display: none !important; }
+      body { background-color: #FAF6F0 !important; margin:0 !important; padding:0 !important; }
+      
+      .proposal-container { 
+        max-width:100% !important; 
+        margin:0 !important; 
+        padding:0 !important; 
+        border: none !important; 
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+      
+      .page-section {
+        display: flex !important; opacity:1 !important; animation:none !important;
+        margin:0 !important; padding:0 !important;
+        width: 297mm !important;
+        height: 210mm !important;
+        page-break-after: always !important; break-after: page !important;
+        overflow: hidden !important;
+        box-sizing: border-box !important;
+        background-color: #FAF6F0 !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+      .page-section:last-of-type { page-break-after: avoid !important; break-after: avoid !important; }
+      
+      /* 封面頁面 - 保持網頁樣式（粗邊框、圓角、陰影） */
+      .cover-card { 
+        display: grid !important;
+        grid-template-columns: 1.2fr 0.8fr !important;
+        width: 275mm !important; 
+        height: 190mm !important; 
+        box-sizing: border-box !important;
+        box-shadow: 6px 6px 0px var(--dark) !important; 
+        border-radius: var(--radius-lg) !important; 
+        border: 3px solid var(--dark) !important;
+        margin: auto !important;
+        overflow: hidden !important;
+        background-color: var(--white) !important;
+      }
+      .cover-left  { 
+        padding: 40px 45px !important; 
+        border-right: 3px solid var(--dark) !important;
+        border-bottom: none !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        height: 100% !important;
+        box-sizing: border-box !important;
+        background-color: var(--bg-yellow) !important;
+      }
+      .cover-title-group { margin: 15px 0 !important; }
+      .cover-title { font-size: 2.3rem !important; margin-bottom: 10px !important; }
+      .cover-subtitle { font-size: 0.95rem !important; }
+      .cover-right { 
+        padding: 30px !important; 
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        height: 100% !important;
+        box-sizing: border-box !important;
+        background-color: var(--bg-blue) !important;
+      }
+      .portrait-wrapper {
+        width: 230px !important;
+        height: 280px !important;
+        filter: drop-shadow(6px 8px 0px var(--dark)) !important;
+      }
+      .portrait-frame {
+        border-radius: 120px 120px 20px 20px !important;
+      }
+      .deco-banner {
+        padding: 6px 20px !important;
+        font-size: 0.8rem !important;
+        bottom: -10px !important;
+      }
+
+      /* 內頁 - 保持網頁樣式（粗邊框、圓角、陰影） */
+      .inner-page-layout {
+        box-shadow: 6px 6px 0px var(--dark) !important; 
+        border-radius: var(--radius-lg) !important;
+        border: 3px solid var(--dark) !important;
+        width: 275mm !important; 
+        height: 190mm !important; 
+        padding: 30px 40px !important;
+        box-sizing: border-box !important;
+        page-break-inside: avoid !important;
+        margin: auto !important;
+        background-color: var(--white) !important;
+      }
+      .section-title { font-size: 1.35rem !important; margin-bottom: 3px !important; }
+      .section-subtitle { font-size: 0.75rem !important; }
+      .section-header { margin-bottom: 15px !important; }
+      .card-title    { font-size: 0.92rem !important; }
+      .card-text     { font-size: 0.8rem !important; line-height: 1.45 !important; }
+      
+      /* 壹、劇團介紹 */
+      .troupe-cols-container {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+      }
+      .troupe-left-col, .troupe-right-col {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+      }
+      .troupe-hero { height: 110px !important; margin-bottom: 0px !important; border-radius: 10px !important; box-shadow: 3px 3px 0 var(--dark) !important; border: 2px solid var(--dark) !important; }
+      .troupe-hero img { height: 100% !important; }
+      .stat-grid { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 10px !important; margin-bottom: 0px !important; }
+      .stat-card { padding: 8px 6px !important; box-shadow: 3px 3px 0 var(--dark) !important; border-radius: 8px !important; border: 2px solid var(--dark) !important; }
+      .stat-number { font-size: 1.5rem !important; }
+      .stat-unit { font-size: 0.75rem !important; }
+      .stat-label { font-size: 0.65rem !important; margin-top: 2px !important; }
+      .story-card { padding: 12px 18px !important; margin-bottom: 0px !important; box-shadow: 3px 3px 0 var(--dark) !important; border-radius: 10px !important; border: 2px solid var(--dark) !important; }
+      .feature-grid { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 10px !important; }
+      .feature-item { padding: 8px 12px !important; gap: 8px !important; box-shadow: 3px 3px 0 var(--dark) !important; border-radius: 8px !important; border: 2px solid var(--dark) !important; }
+      .feature-icon { font-size: 1rem !important; width: 28px !important; height: 28px !important; border-radius: 6px !important; }
+      .feature-text h4 { font-size: 0.82rem !important; margin-bottom: 2px !important; }
+      .feature-text p { font-size: 0.72rem !important; line-height: 1.3 !important; }
+
+      /* 貳、演出卡司 */
+      .cast-list { 
+        display: grid !important; 
+        grid-template-columns: 1fr 1fr !important; 
+        gap: 12px !important; 
+        margin-top: 5px !important; 
+      }
+      .cast-list > div { 
+        height: 110px !important; 
+        box-shadow: 3px 3px 0 var(--dark) !important;
+        border-radius: 12px !important;
+        border: 2px solid var(--dark) !important;
+      }
+      .cast-list > div > div:first-child { 
+        width: 120px !important; 
+        min-width: 120px !important; 
+        border-right: 2px solid var(--dark) !important;
+      }
+      .cast-list > div > div:last-child { 
+        padding: 10px 15px !important; 
+      }
+      .cast-list h3 { font-size: 0.88rem !important; margin: 0 !important; }
+      .cast-list span { font-size: 0.7rem !important; padding: 2px 8px !important; border-radius: 12px !important; }
+      .cast-list p { font-size: 0.72rem !important; line-height: 1.35 !important; }
+      .cast-list div[style*="margin-bottom:12px"] { margin-bottom: 4px !important; }
+
+      /* 參、活動規劃 */
+      .timeline { 
+        display: flex !important;
+        flex-direction: column !important;
+        margin-top: 10px !important; 
+        gap: 12px !important; 
+      }
+      .timeline-item { display: grid !important; grid-template-columns: 110px 1fr !important; gap: 15px !important; }
+      .timeline-item::before { display: block !important; left: 109px !important; }
+      .time-badge { font-size: 0.75rem !important; padding: 4px 8px !important; border-radius: 6px !important; }
+      .timeline-content { padding: 10px 15px !important; box-shadow: 3px 3px 0 var(--dark) !important; border-radius: 10px !important; border: 2px solid var(--dark) !important; }
+      .timeline-title { font-size: 0.88rem !important; }
+      .timeline-tag { font-size: 0.68rem !important; padding: 1px 6px !important; }
+      .timeline-content p { font-size: 0.75rem !important; line-height: 1.4 !important; }
+
+      /* 肆、演出劇目 */
+      .theatre-topics-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 12px !important;
+        margin-top: 10px !important;
+      }
+      .theatre-topics-grid > div {
+        padding: 10px !important;
+        box-shadow: 3px 3px 0 var(--dark) !important;
+        border-radius: var(--radius-sm) !important;
+        border: 2px solid var(--dark) !important;
+      }
+      .theatre-topics-grid h4 {
+        font-size: 0.85rem !important;
+        margin-bottom: 4px !important;
+      }
+      .theatre-topics-grid p {
+        font-size: 0.72rem !important;
+        margin-bottom: 6px !important;
+        line-height: 1.3 !important;
+      }
+      .theatre-topics-grid > div > div:last-child {
+        height: 85px !important;
+        border: 1.5px solid var(--dark) !important;
+      }
+      .stilt-walker-card {
+        padding: 10px 15px !important;
+        gap: 15px !important;
+        margin-top: 12px !important;
+        box-shadow: 3px 3px 0 var(--dark) !important;
+        border: 2.5px solid var(--dark) !important;
+      }
+      .stilt-walker-card > div:first-child {
+        min-width: 250px !important;
+      }
+      .stilt-walker-card > div:last-child {
+        max-width: 120px !important;
+        aspect-ratio: 1.4 !important;
+        box-shadow: 3px 3px 0 var(--dark) !important;
+        border: 2px solid var(--dark) !important;
+      }
+      .stilt-walker-card p {
+        font-size: 0.75rem !important;
+        margin-top: 4px !important;
+        line-height: 1.35 !important;
+      }
+
+      /* 伍、演出經歷 */
+      .content-grid.two-cols {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        margin-bottom: 12px !important;
+        gap: 12px !important;
+      }
+      .content-grid.two-cols .story-card {
+        box-shadow: 3px 3px 0 var(--dark) !important;
+        border: 2.5px solid var(--dark) !important;
+        padding: 15px 20px !important;
+      }
+      .experience-photos-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        margin-bottom: 0px !important;
+        gap: 15px !important;
+      }
+      .experience-photos-grid > div > div:first-child {
+        border-radius: 12px !important;
+        box-shadow: 4px 4px 0 var(--dark) !important;
+        border: 2.5px solid var(--dark) !important;
+        margin-bottom: 6px !important;
+        aspect-ratio: 1.8 !important;
+      }
+      .experience-photos-grid > div > div:last-child {
+        font-size: 0.78rem !important;
+        padding: 3px 12px !important;
+        border-radius: 6px !important;
+        box-shadow: 2px 2px 0 var(--dark) !important;
+        border: 2px solid var(--dark) !important;
+      }
+      .story-list { font-size: 0.75rem !important; line-height: 1.45 !important; }
+      .story-list li { margin-bottom: 2px !important; }
+
+      * { animation:none !important; transition:none !important; }
+    }
+
+    /* PDF 浮動按鈕 */
+    .print-btn-wrap { position:fixed; bottom:28px; right:28px; z-index:999; }
+    .print-btn {
+      background: linear-gradient(135deg, var(--primary), #e05070);
+      color: var(--white); border: 3px solid var(--dark);
+      padding:14px 22px; font-size:0.95rem; font-weight:900;
+      border-radius:50px; cursor:pointer;
+      box-shadow:4px 4px 0px var(--dark); transition: all .2s ease;
+      display:flex; align-items:center; gap:8px;
+      font-family:var(--font-primary); letter-spacing:0.5px;
+    }
+    .print-btn:hover  { transform: translate(-2px,-2px); box-shadow:6px 6px 0px var(--dark); }
+    .print-btn:active { transform: translate(1px,1px);   box-shadow:2px 2px 0px var(--dark); }
+
+    /* 響應式 */
+    @media (max-width:900px) {
+      .cover-card     { grid-template-columns:1fr; min-height:auto; }
+      .cover-left     { border-right:none; border-bottom:3px solid var(--dark); padding:40px 30px; }
+      .cover-right    { padding:40px 30px; min-height:auto; flex-direction:column; }
+      .content-grid.two-cols { grid-template-columns:1fr; }
+      .timeline-item  { grid-template-columns:1fr; }
+      .timeline-item::before { display:none; }
+      .cast-grid      { grid-template-columns: 1fr; gap: 15px; }
+      .cast-card      { height: 160px; }
+      .cast-img       { width: 120px; }
+      .stat-grid      { grid-template-columns:1fr; }
+      .feature-grid   { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 頂部導覽 -->
+  <header>
+    <div class="logo-container">
+      <div class="logo-badge">親子巡演</div>
+      <div class="logo-text">文潔姐姐魔法劇場</div>
+    </div>
+    <div class="nav-links">
+      <button class="nav-btn active" onclick="showPage('cover')">首頁</button>
+      <button class="nav-btn" onclick="showPage('troupe')">劇團介紹</button>
+      <button class="nav-btn" onclick="showPage('cast')">演出卡司</button>
+      <button class="nav-btn" onclick="showPage('schedule')">活動規劃</button>
+      <button class="nav-btn" onclick="showPage('theatre')">演出劇目</button>
+      <button class="nav-btn" onclick="showPage('pricing')">演出經歷</button>
+    </div>
+  </header>
+
+
+
+  <main class="proposal-container">
+
+    <!-- ══════════════════════════════
+         1. 封面頁
+    ══════════════════════════════ -->
+    <section id="page-cover" class="page-section active">
+      <div class="cover-card">
+
+        <!-- 左半 -->
+        <div class="cover-left">
+          <div>
+            <div class="cover-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24">
+                <path d="M12 2L1 21h22L12 2zm0 3.99L19.53 19H4.47L12 5.99zM13 16h-2v2h2v-2zm0-6h-2v4h2v-4z"/>
+              </svg>
+              藝文扎根・深耕鄰里
+            </div>
+            <div class="cover-title-group">
+              <div class="cover-title-tag">親子藝術嘉年華</div>
+              <h1 class="cover-title">
+                「<span class="highlight">文潔姐姐</span><br>
+                <span class="highlight">魔法劇場</span>」
+              </h1>
+              <p class="cover-subtitle">
+                議員 <b>張文潔</b><br>
+                競選形象提升與親子藝文巡演提案書
+              </p>
+            </div>
+          </div>
+          <div class="cover-footer">
+            <div class="cover-meta">
+              <div class="meta-item"><strong>提案單位：</strong> Mr. Yes 小丑劇團</div>
+              <div class="meta-item"><strong>活動對象：</strong> 各里親子家庭</div>
+            </div>
+            <button class="start-btn" onclick="showPage('troupe')">
+              閱讀詳細提案
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- 右半 -->
+        <div class="cover-right">
+          <div class="bg-shape-1"></div>
+          <div class="bg-shape-2"></div>
+          <div class="cloud-deco cloud-1"></div>
+          <div class="cloud-deco cloud-2"></div>
+
+          <!-- 摩天輪 -->
+          <svg class="ferris-wheel" viewBox="0 0 100 100">
+            <circle cx="50" cy="40" r="30" fill="none" stroke="var(--dark)" stroke-width="2.5"/>
+            <line x1="50" y1="40" x2="50" y2="90" stroke="var(--dark)" stroke-width="3"/>
+            <line x1="50" y1="40" x2="25" y2="90" stroke="var(--dark)" stroke-width="2"/>
+            <line x1="50" y1="40" x2="75" y2="90" stroke="var(--dark)" stroke-width="2"/>
+            <circle cx="50" cy="40" r="4" fill="var(--primary)" stroke="var(--dark)" stroke-width="1.5"/>
+            <circle cx="50" cy="10" r="5" fill="var(--accent)" stroke="var(--dark)" stroke-width="1.5"/>
+            <circle cx="80" cy="40" r="5" fill="var(--primary)" stroke="var(--dark)" stroke-width="1.5"/>
+            <circle cx="20" cy="40" r="5" fill="var(--secondary)" stroke="var(--dark)" stroke-width="1.5"/>
+            <circle cx="50" cy="70" r="5" fill="var(--success)" stroke="var(--dark)" stroke-width="1.5"/>
+            <circle cx="71" cy="19" r="5" fill="var(--accent)" stroke="var(--dark)" stroke-width="1.5"/>
+            <circle cx="29" cy="19" r="5" fill="var(--primary)" stroke="var(--dark)" stroke-width="1.5"/>
+            <circle cx="71" cy="61" r="5" fill="var(--secondary)" stroke="var(--dark)" stroke-width="1.5"/>
+            <circle cx="29" cy="61" r="5" fill="var(--success)" stroke="var(--dark)" stroke-width="1.5"/>
+          </svg>
+
+          <!-- 帳篷 -->
+          <svg class="circus-tent" viewBox="0 0 100 80">
+            <polygon points="50,10 15,40 85,40" fill="var(--primary)" stroke="var(--dark)" stroke-width="2"/>
+            <rect x="20" y="40" width="60" height="35" fill="var(--white)" stroke="var(--dark)" stroke-width="2"/>
+            <polygon points="35,40 42,40 42,75 35,75" fill="var(--secondary)"/>
+            <polygon points="58,40 65,40 65,75 58,75" fill="var(--secondary)"/>
+            <polygon points="50,40 57,40 57,75 50,75" fill="var(--accent)"/>
+          </svg>
+
+          <!-- 主要內容：人物框（浮於背景之上） -->
+          <div class="cover-right-inner">
+            <!-- 01.jpg 人物照 -->
+            <div class="portrait-wrapper">
+              <div class="portrait-frame"></div>
+              <div class="deco-banner">🌟 張文潔 議員</div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════
+         2. 劇團介紹 (新頁面)
+    ══════════════════════════════ -->
+    <section id="page-troupe" class="page-section">
+      <div class="inner-page-layout">
+        <div class="section-header">
+          <h2 class="section-title">壹、 劇團介紹</h2>
+          <span class="section-subtitle">ABOUT MR. YES CIRCUS TROUPE</span>
+        </div>
+
+        <!-- 橫向雙欄容器 -->
+        <div class="troupe-cols-container">
+          
+          <!-- 左欄 -->
+          <div class="troupe-left-col">
+            <!-- 場景大圖 Banner -->
+            <div class="troupe-hero">
+              <img src="02.jpg" alt="Mr. YES 小丑劇團親子演出現場">
+              <div class="troupe-hero-overlay">
+                <div class="troupe-hero-title">Mr. YES 小丑劇團</div>
+                <div class="troupe-hero-badge">🎪 專業親子馬戲團</div>
+              </div>
+            </div>
+
+            <!-- 數據亮點 -->
+            <div class="stat-grid">
+              <div class="stat-card" style="background-color:var(--bg-pink);">
+                <div class="stat-number">10<span style="font-size:1.8rem;">+</span></div>
+                <div class="stat-unit">年</div>
+                <div class="stat-label">親子演出資歷</div>
+              </div>
+              <div class="stat-card" style="background-color:var(--bg-blue);">
+                <div class="stat-number">500<span style="font-size:1.8rem;">+</span></div>
+                <div class="stat-unit">場次</div>
+                <div class="stat-label">累積演出場次</div>
+              </div>
+              <div class="stat-card" style="background-color:var(--bg-yellow);">
+                <div class="stat-number">30<span style="font-size:1.8rem;">萬</span></div>
+                <div class="stat-unit">人次</div>
+                <div class="stat-label">服務觀眾人次</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 右欄 -->
+          <div class="troupe-right-col">
+            <!-- 劇團特色 -->
+            <div class="story-card blue-theme" style="margin-bottom:0;">
+              <h3 class="card-title">🎭 關於 Mr. YES 小丑劇團</h3>
+              <p class="card-text" style="line-height:1.9;">
+                2019年劇團作品關注育兒以及感統發展等知識，嘗試利用創作跟育兒相關議題和觀眾對話，讓『親子』與『馬戲』兩個詞彙緊密的相連在一起。從夫妻育兒作品『森林幻想曲』到幼兒認知『三隻青蛙』我們的作品如同一顆純真的心隨著不斷提問持續成長。
+              </p>
+            </div>
+
+            <!-- 四大核心特色 -->
+            <div class="feature-grid">
+              <div class="feature-item">
+                <div class="feature-icon">🤹</div>
+                <div class="feature-text">
+                  <h4>專業馬戲特技</h4>
+                  <p>獨輪車、雜耍拋接、肢體平衡等高難度特技，視覺震撼力十足，秒速吸引人潮駐足。</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">📚</div>
+                <div class="feature-text">
+                  <h4>議題融合劇場</h4>
+                  <p>將環境保育、兩性平權、防範霸凌等社會議題，以孩童易懂的故事敘事融入演出，達到品格教育的目的。</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">🎙️</div>
+                <div class="feature-text">
+                  <h4>高互動主持設計</h4>
+                  <p>全程互動式流程設計，引導台下親子即時參與，每場凝聚 150–300 人共同投入冒險旅程，現場氣氛熱烈。</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">🗺️</div>
+                <div class="feature-text">
+                  <h4>社區深根巡演模式</h4>
+                  <p>採機動性戶外演出規格，場地限制低，可於公園、廣場、學校禮堂快速佈置，彈性配合里別排程。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="proposal-navigation">
+          <button class="nav-arrow-btn" onclick="showPage('cover')">◀ 返回首頁</button>
+          <button class="nav-arrow-btn" onclick="showPage('cast')">演出卡司 ▶</button>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════
+         3. 演出卡司
+    ══════════════════════════════ -->
+    <section id="page-cast" class="page-section">
+      <div class="inner-page-layout">
+        <div class="section-header">
+          <h2 class="section-title">貳、 演出卡司與劇團陣容</h2>
+          <span class="section-subtitle">CAST &amp; PRODUCTION TEAM</span>
+        </div>
+
+        <div style="margin-bottom:20px;font-size:0.95rem;color:#3e4a68;background-color:var(--bg-yellow);border:2px dashed var(--accent);padding:12px 20px;border-radius:var(--radius-sm);display:inline-block;font-weight:500;">
+          💡 <b>備註：</b>演員將依照劇目進行調整。
+        </div>
+
+        <div class="cast-list" style="display:flex; flex-direction:column; gap:20px; margin-top:10px;">
+
+          <!-- 卡司 1 -->
+          <div style="background:var(--white); border:2.5px solid var(--dark); border-radius:16px; overflow:hidden; box-shadow:4px 4px 0 var(--dark); display:flex; flex-direction:row; align-items:stretch;">
+            <div style="width:180px; min-width:180px; flex-shrink:0; border-right:2.5px solid var(--dark); background-image:url('004.jpg'); background-size:cover; background-position: 95% center;"></div>
+            <div style="padding:22px 26px; flex:1; display:flex; flex-direction:column; justify-content:center;">
+              <div style="display:flex; align-items:center; gap:14px; margin-bottom:12px;">
+                <span style="background-color:var(--bg-pink); color:var(--primary); border:1.5px solid var(--primary); border-radius:20px; padding:4px 14px; font-size:0.8rem; font-weight:700; white-space:nowrap; flex-shrink:0;">活動主持人</span>
+                <h3 style="font-size:1.1rem; font-weight:900; color:var(--dark); margin:0;">兜兜姊姊</h3>
+              </div>
+              <p style="font-size:0.93rem; color:#3e4a68; line-height:1.75; margin:0;">本次巡演的活動主持人。以親切活潑的主持風格串連每一個演出單元，引導小朋友與台上演員互動，帶動全場的熱烈氣氛與笑聲。</p>
+            </div>
+          </div>
+
+          <!-- 卡司 2 -->
+          <div style="background:var(--white); border:2.5px solid var(--dark); border-radius:16px; overflow:hidden; box-shadow:4px 4px 0 var(--dark); display:flex; flex-direction:row; align-items:stretch;">
+            <div style="width:180px; min-width:180px; flex-shrink:0; border-right:2.5px solid var(--dark); background-image:url('003.jpg'); background-size:cover; background-position: 95% center;"></div>
+            <div style="padding:22px 26px; flex:1; display:flex; flex-direction:column; justify-content:center;">
+              <div style="display:flex; align-items:center; gap:14px; margin-bottom:12px;">
+                <span style="background-color:var(--bg-blue); color:var(--secondary); border:1.5px solid var(--secondary); border-radius:20px; padding:4px 14px; font-size:0.8rem; font-weight:700; white-space:nowrap; flex-shrink:0;">魔法故事劇場</span>
+                <h3 style="font-size:1.1rem; font-weight:900; color:var(--dark); margin:0;">故事姐姐 / 說書人</h3>
+              </div>
+              <p style="font-size:0.93rem; color:#3e4a68; line-height:1.75; margin:0;">劇團首席說書演員，以溫柔且富感染力的聲音與肢體，引領孩子進入充滿想像力的故事書，學習防霸凌、環保與平權教育。</p>
+            </div>
+          </div>
+
+          <!-- 卡司 3 -->
+          <div style="background:var(--white); border:2.5px solid var(--dark); border-radius:16px; overflow:hidden; box-shadow:4px 4px 0 var(--dark); display:flex; flex-direction:row; align-items:stretch;">
+            <div style="width:180px; min-width:180px; flex-shrink:0; border-right:2.5px solid var(--dark); background-image:url('005.jpg'); background-size:cover; background-position:center top;"></div>
+            <div style="padding:22px 26px; flex:1; display:flex; flex-direction:column; justify-content:center;">
+              <div style="display:flex; align-items:center; gap:14px; margin-bottom:12px;">
+                <span style="background-color:var(--bg-yellow); color:#B27B00; border:1.5px solid var(--accent); border-radius:20px; padding:4px 14px; font-size:0.8rem; font-weight:700; white-space:nowrap; flex-shrink:0;">小丑劇場</span>
+                <h3 style="font-size:1.1rem; font-weight:900; color:var(--dark); margin:0;">Mr. YES 小丑演員</h3>
+              </div>
+              <p style="font-size:0.93rem; color:#3e4a68; line-height:1.75; margin:0;">劇團核心幽默擔當。透過經典默劇肢體、滑稽失誤與幽默互動，為現場帶來豐富笑聲，展現貼近人心的小丑哲學。</p>
+            </div>
+          </div>
+
+          <!-- 卡司 4 -->
+          <div style="background:var(--white); border:2.5px solid var(--dark); border-radius:16px; overflow:hidden; box-shadow:4px 4px 0 var(--dark); display:flex; flex-direction:row; align-items:stretch;">
+            <div style="width:180px; min-width:180px; flex-shrink:0; border-right:2.5px solid var(--dark); background-image:url('04.jpg'); background-size:cover; background-position:center top;"></div>
+            <div style="padding:22px 26px; flex:1; display:flex; flex-direction:column; justify-content:center;">
+              <div style="display:flex; align-items:center; gap:14px; margin-bottom:12px;">
+                <span style="background-color:var(--bg-green); color:var(--success); border:1.5px solid var(--success); border-radius:20px; padding:4px 14px; font-size:0.8rem; font-weight:700; white-space:nowrap; flex-shrink:0;">馬戲特技</span>
+                <h3 style="font-size:1.1rem; font-weight:900; color:var(--dark); margin:0;">特技表演者</h3>
+              </div>
+              <p style="font-size:0.93rem; color:#3e4a68; line-height:1.75; margin:0;">帶來精彩的獨輪車、雜耍球棒拋接與高難度肢體平衡展演，以高超技巧展現力與美，掀起活動現場一波波高潮。</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="proposal-navigation">
+          <button class="nav-arrow-btn" onclick="showPage('troupe')">◀ 劇團介紹</button>
+          <button class="nav-arrow-btn" onclick="showPage('schedule')">活動規劃 ▶</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         4. 活動規劃
+    ══════════════════════════════ -->
+    <section id="page-schedule" class="page-section">
+      <div class="inner-page-layout">
+        <div class="section-header">
+          <h2 class="section-title">參、 社區巡演規劃與單場流程</h2>
+          <span class="section-subtitle">EVENT SCHEDULE &amp; RUN SHEET</span>
+        </div>
+
+        <div style="margin-bottom:30px;">
+          <p>活動地點規劃於<b>各公園綠地、學校禮堂、社區活動中心</b>。單場時間長度為 <b>75 分鐘</b>，流程結構如下：</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="time-badge">00 - 15 Mins</div>
+            <div class="timeline-content">
+              <div class="timeline-title-group">
+                <h4 class="timeline-title">【序幕】童話嘉年華開場舞</h4>
+                <span class="timeline-tag">熱烈吸睛</span>
+              </div>
+              <p class="card-text">劇團演員身穿華麗角色服裝，以迪士尼般歡樂活潑的嘉年華舞蹈與律動開場，迅速聚集公園及周邊的人群。<b>【議員互動設計】</b> 張文潔議員化身「童話守護者」以精緻造型驚喜出場，與演員一同跳段簡單手勢舞，並親切帶動台下小朋友。</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="time-badge">15 - 20 Mins</div>
+            <div class="timeline-content">
+              <div class="timeline-title-group">
+                <h4 class="timeline-title">【暖身】文潔姐姐悄悄話</h4>
+                <span class="timeline-tag">溫馨交流</span>
+              </div>
+              <p class="card-text">張文潔議員簡短致詞（非傳統選舉口號，而是以關心孩子教育與社區生活的親民角度出發）。宣布「小小公民冒險集章計畫」正式啟動，點燃孩子們的挑戰熱情。</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="time-badge">20 - 65 Mins</div>
+            <div class="timeline-content">
+              <div class="timeline-title-group">
+                <h4 class="timeline-title">【正戲】互動式社會議題劇場</h4>
+                <span class="timeline-tag">寓教於樂</span>
+              </div>
+              <p class="card-text">劇團演出原創故事，將社會核心議題（環境保育、兩性平權、校園霸凌防範）精緻地編織進冒險旅程，孩子與台上的演員即時互動、大聲呼喊魔法咒語來協助主角解決難題。議員在台下與家長、孩子坐在一起同樂。</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="time-badge">65 - 75 Mins</div>
+            <div class="timeline-content">
+              <div class="timeline-title-group">
+                <h4 class="timeline-title">【尾聲】冒險認證與大合照</h4>
+                <span class="timeline-tag">黏著引流</span>
+              </div>
+              <p class="card-text">謝幕後，張文潔議員至簽到台，為小朋友進行互動任務蓋章認證。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="proposal-navigation">
+          <button class="nav-arrow-btn" onclick="showPage('cast')">◀ 演出卡司</button>
+          <button class="nav-arrow-btn" onclick="showPage('theatre')">演出劇目 ▶</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         5. 演出劇目
+    ══════════════════════════════ -->
+    <section id="page-theatre" class="page-section">
+      <div class="inner-page-layout">
+        <div class="section-header">
+          <h2 class="section-title">肆、 演出劇目</h2>
+          <span class="section-subtitle">THEATRE THEMES &amp; SHOWS</span>
+        </div>
+
+        <div class="content-grid">
+          <div class="story-card green-theme">
+            <h3 class="card-title">劇目議題設計（45分鐘）</h3>
+            <div class="theatre-topics-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:20px;">
+              <div style="background:var(--white);border:2.5px solid var(--dark);border-radius:var(--radius-sm);padding:20px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:3px 3px 0 var(--dark);">
+                <div>
+                  <h4 style="font-weight:900;color:var(--dark);margin-bottom:10px;font-size:1.15rem;display:flex;align-items:center;gap:8px;"><span style="color:var(--success);">🌱</span> 環境保育</h4>
+                  <p style="font-size:0.92rem;color:#3e4a68;text-align:justify;margin-bottom:15px;">融入故事中「拯救魔法森林」任務，引導孩子現場垃圾分類、建立生活減塑與海洋保育觀念。</p>
+                </div>
+                <div style="width:100%;height:220px;border:2px solid var(--dark);border-radius:8px;overflow:hidden;background-color:var(--light);">
+                  <img src="009.jpg" alt="環境保育" style="width:100%;height:100%;object-fit:cover;">
+                </div>
+              </div>
+              <div style="background:var(--white);border:2.5px solid var(--dark);border-radius:var(--radius-sm);padding:20px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:3px 3px 0 var(--dark);">
+                <div>
+                  <h4 style="font-weight:900;color:var(--dark);margin-bottom:10px;font-size:1.15rem;display:flex;align-items:center;gap:8px;"><span style="color:var(--primary);">👫</span> 兩性平權</h4>
+                  <p style="font-size:0.92rem;color:#3e4a68;text-align:justify;margin-bottom:15px;">翻轉刻板印象，劇中女主角用勇氣與智謀克服困難，男主角展現細心與同理心，傳遞相互尊重精神。</p>
+                </div>
+                <div style="width:100%;height:220px;border:2px solid var(--dark);border-radius:8px;overflow:hidden;background-color:var(--light);">
+                  <img src="010.jpg" alt="兩性平權" style="width:100%;height:100%;object-fit:cover;">
+                </div>
+              </div>
+              <div style="background:var(--white);border:2.5px solid var(--dark);border-radius:var(--radius-sm);padding:20px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:3px 3px 0 var(--dark);">
+                <div>
+                  <h4 style="font-weight:900;color:var(--dark);margin-bottom:10px;font-size:1.15rem;display:flex;align-items:center;gap:8px;"><span style="color:var(--secondary);">🛡️</span> 防範校園霸凌</h4>
+                  <p style="font-size:0.92rem;color:#3e4a68;text-align:justify;margin-bottom:15px;">藉由可愛森林動物的生活遭遇，教導孩童在學校被嘲笑或孤立時，如何勇敢向霸凌說不，並向大人尋求幫助。</p>
+                </div>
+                <div style="width:100%;height:220px;border:2px solid var(--dark);border-radius:8px;overflow:hidden;background-color:var(--light);">
+                  <img src="011.JPG" alt="防範校園霸凌" style="width:100%;height:100%;object-fit:cover;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="story-card yellow-theme stilt-walker-card" style="display:flex;flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:30px;">
+            <div style="flex:1;min-width:250px;">
+              <h3 class="card-title">會場快閃 - 高蹺巨人</h3>
+              <p class="card-text" style="line-height:1.7;color:#3e4a68;margin-top:15px;">
+                特別規劃高蹺巨人於演出前後在會場進行快閃互動，高人一等的巨大身形與繽紛造型將成為全場吸睛焦點，吸引無數家庭爭相拍照打卡，為活動增添滿滿歡樂與話題性！
+              </p>
+            </div>
+            <div style="width:100%;max-width:340px;aspect-ratio:1.2;border:3px solid var(--dark);border-radius:16px;overflow:hidden;box-shadow:4px 4px 0px var(--dark);background-color:var(--white);flex-shrink:0;">
+              <img src="088.jpg" alt="會場快閃 - 高蹺巨人" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+          </div>
+        </div>
+
+        <div class="proposal-navigation">
+          <button class="nav-arrow-btn" onclick="showPage('schedule')">◀ 上一頁</button>
+          <button class="nav-arrow-btn" onclick="showPage('pricing')">演出經歷 ▶</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         6. 演出經歷
+    ══════════════════════════════ -->
+    <section id="page-pricing" class="page-section">
+      <div class="inner-page-layout">
+        <div class="section-header">
+          <h2 class="section-title">伍、 劇團演出經歷</h2>
+          <span class="section-subtitle">TROUPE PERFORMANCES &amp; EXPERIENCE</span>
+        </div>
+
+        <div style="margin-bottom:30px;">
+          <p>Mr. YES 小丑劇團近年活躍於全台各大藝文季、劇場及社區巡演，累積超過 500 場演出，擁有豐富的親子馬戲互動經驗：</p>
+        </div>
+
+        <!-- 代表劇目與合作經歷卡片 -->
+        <div class="content-grid two-cols" style="margin-bottom:30px;">
+          <div class="story-card pink-theme">
+            <h3 class="card-title">🎭 代表劇目作品</h3>
+            <ul class="story-list" style="font-size:0.95rem; line-height:1.8;">
+              <li><b>《森林幻想曲》</b>：結合小丑馬戲與夫妻育兒心境的溫馨劇場，受邀於多個藝術節演出。</li>
+              <li><b>《三隻青蛙》</b>：針對幼兒認知與感統發展設計的互動馬戲劇目，深獲家長好評。</li>
+              <li><b>《一顆奇特的蛋》</b>：台北兒童藝術節演出劇目，融合雜耍特技與趣味情節。</li>
+              <li><b>《海裡有怪物》</b>：環保議題互動馬戲，教導孩子海洋保育與減塑生活。</li>
+            </ul>
+          </div>
+          <div class="story-card blue-theme">
+            <h3 class="card-title">🏛️ 合作與政府演出經歷</h3>
+            <ul class="story-list" style="font-size:0.95rem; line-height:1.8;">
+              <li><b>臺北表演藝術中心</b>：合作北藝中心導覽「漂浮探險隊」活動與演出。</li>
+              <li><b>台北兒童藝術節</b>：受邀演出《小題大作》、《消失的魔法帽》等多個精選劇目。</li>
+              <li><b>文化部文化平權巡演</b>：參與「庄頭劇場」巡迴演出，深耕地方藝文推廣。</li>
+              <li><b>各縣市親子藝文季</b>：受邀參與新竹、台中、高雄等地方政府親子巡迴馬戲演出。</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 經歷照片展示 -->
+        <div class="content-grid two-cols experience-photos-grid" style="margin-bottom:30px;">
+          <div style="text-align:center;">
+            <div style="border:3px solid var(--dark); border-radius:20px; overflow:hidden; box-shadow:6px 6px 0 var(--dark); background-color:var(--white); aspect-ratio:1.45; margin-bottom:15px;">
+              <img src="885.jpg" alt="戴瑋姍議員" style="width:100%; height:100%; object-fit:cover; display:block;">
+            </div>
+            <div style="text-align:center; font-weight:bold; color:var(--dark); font-size:1.05rem; background-color:var(--bg-pink); border:2.5px solid var(--dark); padding:6px 20px; border-radius:10px; box-shadow:3px 3px 0 var(--dark); display:inline-block; margin-bottom:10px;">戴瑋姍議員</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="border:3px solid var(--dark); border-radius:20px; overflow:hidden; box-shadow:6px 6px 0 var(--dark); background-color:var(--white); aspect-ratio:1.45; margin-bottom:15px;">
+              <img src="888.jpg" alt="蔡其昌委員" style="width:100%; height:100%; object-fit:cover; display:block;">
+            </div>
+            <div style="text-align:center; font-weight:bold; color:var(--dark); font-size:1.05rem; background-color:var(--bg-blue); border:2.5px solid var(--dark); padding:6px 20px; border-radius:10px; box-shadow:3px 3px 0 var(--dark); display:inline-block; margin-bottom:10px;">蔡其昌委員</div>
+          </div>
+        </div>
+
+        <div class="proposal-navigation">
+          <button class="nav-arrow-btn" onclick="showPage('theatre')">◀ 上一頁</button>
+          <button class="nav-arrow-btn" onclick="showPage('cover')">返回首頁 ↺</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    function showPage(pageId) {
+      document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
+      const target = document.getElementById('page-' + pageId);
+      if (target) { target.classList.add('active'); window.scrollTo({top:0,behavior:'smooth'}); }
+      document.querySelectorAll('.nav-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('onclick').includes(pageId));
+      });
+    }
+
+    function printAllPages() {
+      const sections = document.querySelectorAll('.page-section');
+      sections.forEach(s => { s.classList.add('active'); s.style.display = 'block'; });
+      setTimeout(() => {
+        window.print();
+        const restore = () => {
+          sections.forEach(s => { s.style.display = ''; s.classList.remove('active'); });
+          const cover = document.getElementById('page-cover');
+          if (cover) cover.classList.add('active');
+          window.removeEventListener('afterprint', restore);
+        };
+        window.addEventListener('afterprint', restore);
+      }, 300);
+    }
+
+    window.addEventListener('DOMContentLoaded', () => showPage('cover'));
+  </script>
+</body>
+</html>
