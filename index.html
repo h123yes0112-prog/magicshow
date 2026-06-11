@@ -687,17 +687,142 @@
 
     /* 響應式 */
     @media (max-width:900px) {
-      .cover-card     { grid-template-columns:1fr; min-height:auto; }
-      .cover-left     { border-right:none; border-bottom:3px solid var(--dark); padding:40px 30px; }
-      .cover-right    { padding:40px 30px; min-height:auto; flex-direction:column; }
-      .content-grid.two-cols { grid-template-columns:1fr; }
-      .timeline-item  { grid-template-columns:1fr; }
-      .timeline-item::before { display:none; }
-      .cast-grid      { grid-template-columns: 1fr; gap: 15px; }
-      .cast-card      { height: 160px; }
-      .cast-img       { width: 120px; }
-      .stat-grid      { grid-template-columns:1fr; }
-      .feature-grid   { grid-template-columns:1fr; }
+      header {
+        flex-direction: column !important;
+        padding: 15px 10px !important;
+        gap: 12px !important;
+      }
+      .logo-container {
+        justify-content: center !important;
+      }
+      .nav-links {
+        width: 100% !important;
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+      }
+      .nav-btn {
+        font-size: 0.85rem !important;
+        padding: 6px 10px !important;
+      }
+      .proposal-container {
+        margin: 15px auto !important;
+        padding: 0 10px !important;
+      }
+      .inner-page-layout {
+        padding: 25px 15px !important;
+        min-height: auto !important;
+        border-radius: var(--radius-md) !important;
+      }
+      .section-header {
+        margin-bottom: 20px !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 6px !important;
+      }
+      .section-title {
+        font-size: 1.4rem !important;
+      }
+      .cover-card     { grid-template-columns:1fr !important; min-height:auto !important; border-radius: var(--radius-md) !important; }
+      .cover-left     { border-right:none !important; border-bottom:3px solid var(--dark) !important; padding:30px 20px !important; }
+      .cover-title    { font-size: 2.2rem !important; }
+      .cover-subtitle { font-size: 0.95rem !important; }
+      .cover-right    { padding:35px 20px !important; min-height:auto !important; flex-direction:column !important; }
+      .portrait-wrapper {
+        width: 100% !important;
+        max-width: 280px !important;
+        height: 336px !important;
+      }
+      .content-grid.two-cols { grid-template-columns:1fr !important; gap: 20px !important; }
+      .timeline-item  { grid-template-columns:1fr !important; gap: 10px !important; }
+      .timeline-item::before { display:none !important; }
+      .time-badge {
+        align-self: flex-start !important;
+        margin-bottom: -5px !important;
+      }
+      .cast-grid      { grid-template-columns: 1fr !important; gap: 15px !important; }
+      .cast-card      { height: auto !important; flex-direction: column !important; }
+      .cast-img       { width: 100% !important; height: 180px !important; border-right: none !important; border-bottom: 3px solid var(--dark) !important; }
+      .stat-grid      { grid-template-columns:1fr !important; gap: 15px !important; }
+      .feature-grid   { grid-template-columns:1fr !important; gap: 15px !important; }
+      
+      /* 卡司清單在手機版調整為垂直排列，照片在上方，文字在下方 */
+      .cast-list > div {
+        flex-direction: column !important;
+        height: auto !important;
+      }
+      .cast-list > div > div:first-child {
+        width: 100% !important;
+        min-width: 100% !important;
+        height: 200px !important;
+        border-right: none !important;
+        border-bottom: 2.5px solid var(--dark) !important;
+      }
+      .cast-list > div > div:last-child {
+        padding: 15px 20px !important;
+      }
+      
+      /* 演出劇目手機版排版 */
+      .theatre-topics-grid {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+      }
+      .theatre-topics-grid > div {
+        padding: 15px !important;
+      }
+      .theatre-topics-grid > div > div:last-child {
+        height: 160px !important;
+      }
+      
+      /* 高蹺巨人卡片手機版排版 */
+      .stilt-walker-card {
+        flex-direction: column !important;
+        gap: 15px !important;
+        align-items: stretch !important;
+      }
+      .stilt-walker-card > div:first-child {
+        min-width: 100% !important;
+      }
+      .stilt-walker-card > div:last-child {
+        max-width: 100% !important;
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 1.4 !important;
+      }
+      
+      /* 經歷照片手機版間距 */
+      .experience-photos-grid > div {
+        margin-bottom: 20px !important;
+      }
+      .experience-photos-grid > div:last-child {
+        margin-bottom: 0 !important;
+      }
+      
+      .proposal-navigation {
+        gap: 10px !important;
+      }
+      .nav-arrow-btn {
+        padding: 8px 12px !important;
+        font-size: 0.85rem !important;
+      }
+      
+      /* 劇團介紹 Banner 手機版調整 */
+      .troupe-hero img {
+        height: 200px !important;
+      }
+      .troupe-hero-overlay {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 8px !important;
+        padding: 15px !important;
+      }
+      .troupe-hero-title {
+        font-size: 1.3rem !important;
+      }
+      .troupe-hero-badge {
+        font-size: 0.75rem !important;
+        padding: 4px 10px !important;
+      }
     }
   </style>
 </head>
